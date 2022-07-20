@@ -7,20 +7,49 @@
     </head>
 
     <body>
-        <h1>Banco Nathan</h1>
-        <p>Proporcionamos todo tipo de conforto em suas transações</p>
-        <ol>
-            <li>Empréstimo</li>
-            <li>Saque mais próximo</li>
-            <li>Financiamento</li>
-            <li>Extrato</li>
-        </ol>
-        <hr>
-        <ul>
-            <li>Quem somos</li>
-            <li>SAC</li>
-            <li>Trabalhe conosco</li>
-            <li>Nossa história</li>
-        </ul>
+        <h1>Nathan Calçados</h1>
+        
+        <form>
+            <label for="nome">Nome</label>
+            <input name="Nome" id="nome" placeholder="Digite seu nome">
+            <br><br>
+            <label for="email">E-mail</label>
+            <input name="Email" id="email" placeholder="Digite seu e-mail">
+            <br><br>
+            <label for="numSapato">Numero do sapato</label>
+            <select name="numeroSapato" id="numSapato">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+            </select>
+            <br><br>
+            <p><b>Tipo</b></p>
+            <input type="checkbox" id="presente">
+            <label name="Presente" for="presente">Vai presentear alguém?</label>
+            <br><br>
+            <label for="marca">Marca</label>
+            <select name="Marca" id="marca">
+                <option value="marca1">Marca 1</option>
+                <option value="marca2">Marca 2</option>
+                <option value="marca3">Marca 3</option>
+            </select>
+            <br><br>
+            <label for="cor">Cor do sapato</label>
+            <select name="Cor" id="cor">
+                <option value="green">Verde</option>
+                <option value="yellow">Amarelo</option>
+                <option value="red">Vermelho</option>
+            </select>
+            <br><br>
+            <button>Enviar</button>
+        </form>
     </body>
 </html>
