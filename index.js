@@ -24,7 +24,6 @@ function removeHiddenCards() {
     const hiddenCards = document.querySelectorAll(".hidden")
     for (let i=0; i < hiddenCards.length; i++) {
         const hiddenCard = hiddenCards[i];
-        // hiddenCard.remove();
         document.querySelector('.lista').removeChild(hiddenCard);
     }
     hiddenCards.remove;
@@ -32,10 +31,18 @@ function removeHiddenCards() {
 
 addHidennCards();
 
-function resizeHandler(e) {
-    removeHiddenCards();
-    addHidennCards();
-    // console.log("resize");
+let timer;
+
+function resizeHandlerWithDebounce(_debounceTime) {
+    if (timer) {
+        clearTimeout(timer);
+    }
+        timer = setTimeout(() => {
+            console.log("ativar");
+            removeHiddenCards();
+            addHidennCards();
+            timer = null;
+        }, _debounceTime);
 }
 
- window.onresize = resizeHandler;
+window.onresize = () => resizeHandlerWithDebounce(1000);
